@@ -6,6 +6,7 @@ public class Tesis extends Escrito {
     private String conclusion;
     private String referencias;
     private String interpretacion;
+
     public String getIdea() {
         return idea;
     }
@@ -72,8 +73,7 @@ public class Tesis extends Escrito {
         r += this.idea + "\n"; 
         r += this.argumentos + "\n"; 
         r += this.conclusion + "\n"; 
-        r += this.referencias + "\n"; 
-        r+= this.interpretacion;
+        r += this.referencias;
 
         return  r;
     }

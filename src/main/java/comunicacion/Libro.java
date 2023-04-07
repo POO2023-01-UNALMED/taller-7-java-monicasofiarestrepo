@@ -5,6 +5,7 @@ public class Libro extends Escrito{
     private String editorial;
     private String edicion;
     private String interpretacion;
+
     //getters y setters
     public String getCo_autor() {
         return co_autor;
@@ -39,7 +40,16 @@ public class Libro extends Escrito{
         this.edicion = edicion;
         this.interpretacion = interpretacion;
     }
-    //metodos heredados de pictograma
+
+    public int palabrasTotales(int numero){
+        return numero*this.getPaginas()*2;
+        //2 es el factor, numero lo recibe, paginas lo saca de la
+    }
+
+    public String interpretacion(){
+        return this.interpretacion;
+    }
+
     public String toString(){
         String  r = this.getOrigen()+ "\n"; 
         r += this.getTitulo() + "\n";
@@ -51,13 +61,7 @@ public class Libro extends Escrito{
 
         return  r;
     }
-    public String interpretacion(){
-        return this.interpretacion;
-    }
-//metodos heredados de Escrito 
-    public int palabrasTotales(int numero){
-        return numero*this.getPaginas()*2;
-        //2 es el factor, numero lo recibe, paginas lo saca de la
-    }
+
+
     } 
 
